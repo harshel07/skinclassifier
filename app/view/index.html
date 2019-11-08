@@ -1,0 +1,75 @@
+<html lang='en'>
+<head>
+  <meta charset='utf-8'>
+  <link rel='stylesheet' href='../static/style.css'>
+  <script src='../static/client.js'></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+  body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  .hero-image {
+    background-image: url("https://image.freepik.com/free-photo/red-stethoscope-black-background-healthcare-medicine-concept_61573-1101.jpg");
+    background-color: #cccccc;
+    height: 1500px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: 10px;
+  }
+
+  .hero-text {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+  }
+  </style>
+</head>
+<body>
+  <div class='hero-image'>
+    <div class="hero-text">
+      <h1 style="font-size:40px">Skin Cancer Classification</h1>
+    <p style="font-size:20px">
+      <i>
+      Identify what type of <strong>Skin Cancer</strong> it is....
+    </i>
+    </p>
+    <p>
+      <center>
+        <strong style="font-size:20px" >Let's find out!</strong>
+      </center>
+    </p>
+
+    <div class='content'>
+      <div class='no-display'>
+        <input id='file-input'
+               class='no-display'
+               type='file'
+               name='file'
+               accept='image/*'
+               onchange='showPicked(this)'>
+      </div>
+      <br>
+      <button class='choose-file-button' type='button' onclick='showPicker()'>Select Image</button>
+      <div class='upload-label'>
+        <label id='upload-label'>No file chosen</label>
+      </div>
+      <div>
+        <img id='image-picked' class='no-display' alt='Chosen Image' height='200'>
+      </div>
+      <div class='analyze'>
+        <button id='analyze-button' class='analyze-button' type='button' onclick='analyze()' >Analyze</button>
+      </div>
+      <div class='result-label'>
+        <label id='result-label'></label>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
